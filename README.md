@@ -1,0 +1,1 @@
+Erciyes Üniversitesinde Biyoistatistik adlı dersinde hocamızın verdiği ödevin sonuçlarıdır. Her birimize veri setleri verilip ödevin konuları verildi. Benimki ödev konusu ise age ve sex’in class üzerinde farklılığıydı. R dili üzerinden veri setini ayıklarak beliritilen özelliklere göre t testi, anova, manova gibi durumları kullandım. Sonra da görselleştirdim.
