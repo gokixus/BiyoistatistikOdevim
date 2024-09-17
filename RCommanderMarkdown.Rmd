@@ -1,0 +1,36 @@
+<!-- R Commander Markdown Template -->
+
+Replace with Main Title
+=======================
+
+### Gokixus
+
+### `r as.character(Sys.Date())`
+
+```{r echo=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, out.width=750, fig.height=8, fig.width=8)
+library(Rcmdr)
+library(car)
+library(RcmdrMisc)
+```
+
+```{r}
+Dataset <- readXL("C:/Users/LENOVO/Desktop/hepatit.xlsx", rownames=FALSE, 
+  header=TRUE, na="", sheet="Sayfa1", stringsAsFactors=TRUE)
+```
+
+```{r}
+Dataset <- within(Dataset, {
+  sex <- Recode(sex, '1="MALE"; 2="FEMALE"', as.factor=FALSE, to.value="=", 
+  interval=":", separator=";")
+})
+```
+
+```{r}
+Dataset <- within(Dataset, {
+  class <- Recode(class, '1="DIE"; 2="LIVE";', as.factor=FALSE, 
+  to.value="=", interval=":", separator=";")
+})
+```
+
